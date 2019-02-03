@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 
   def new
     if session[:name]
-      render :'application/hello'
+      redirect_to '/'
     else
       render :new
     end
