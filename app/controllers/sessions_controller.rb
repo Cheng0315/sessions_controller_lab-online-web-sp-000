@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 
   def create
     if !params[:user]
-      redirect_to :new
+      redirect_to '/login'
     else
       render :'application/hello'
     end
