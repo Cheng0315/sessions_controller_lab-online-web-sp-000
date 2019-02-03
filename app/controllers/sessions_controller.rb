@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     if !params[:name] || params[:name].empty?
       redirect_to '/login'
     else
-      render :'application/hello'
+      session[:name] = params[:name]
     end
   end
 end
