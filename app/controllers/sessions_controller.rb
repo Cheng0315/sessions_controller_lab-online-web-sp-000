@@ -7,4 +7,12 @@ class SessionsController < ApplicationController
       render :new
     end
   end
+
+  def create
+    if params[:user].empty?
+      render :new
+    else
+      render :'application/hello'
+    end
+  end
 end
