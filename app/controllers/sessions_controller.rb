@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
-    if session[:user]
+    if session[:name]
       render :'application/hello'
     else
       render :new
@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if !params[:user]
+    if !params[:name]
       redirect_to '/login'
     else
       render :'application/hello'
