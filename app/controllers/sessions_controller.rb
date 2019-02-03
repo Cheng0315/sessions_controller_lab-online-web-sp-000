@@ -16,4 +16,9 @@ class SessionsController < ApplicationController
       redirect_to '/'
     end
   end
+
+  def desetroy
+    session[:name].destroy
+    redirect_to '/'
+  end
 end
