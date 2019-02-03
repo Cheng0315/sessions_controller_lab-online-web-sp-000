@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if !!params[:user]
+    if !params[:user]
       render :new
     else
       render :'application/hello'
